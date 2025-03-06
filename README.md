@@ -5,10 +5,7 @@ remove old versions
 
 https://askubuntu.com/questions/84483/how-to-completely-uninstall-java
 
-
-install new
-
-[sudo apt-get install openjdk-8-jre](https://learn.microsoft.com/en-us/java/openjdk/install#install-on-ubuntu)
+[install new](https://learn.microsoft.com/en-us/java/openjdk/install#install-on-ubuntu)
 
 sudo apt install maven
 

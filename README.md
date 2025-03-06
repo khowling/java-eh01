@@ -12,8 +12,22 @@ install new
 
 sudo apt install maven
 
+#  Create VM, EventHub, and Hub.
 
-# Install Project
+* Add User Managed identity to the VM
+* Add 'Azure Event Hubs Data Sender' role on the 'Hub' scope to the Managed Identity
+* update `App.java` with namespace and hub
+
+# Run
+
+```
+mvn package
+mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
+```
+
+
+
+# How the Project was created
 
 ```
 mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=java-eh -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.5 -DinteractiveMode=false
@@ -30,12 +44,3 @@ mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=java-eh -Darchet
 mvn package -Dmaven.test.skip
 ```
 
-#  Create EventHub, and Hub.
-
-Add 'Azure Event Hubs Data Sender'role on the 'Hub' scope to the Managed Identity
-
-# Run
-
-```
-mvn exec:java -Dexec.mainClass="com.mycompany.app.App"
-```

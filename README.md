@@ -23,6 +23,10 @@ mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=java-eh -Darchet
 mvn package -Dmaven.test.skip
 ```
 
+#  Create EventHub, and Hub.
+
+Add 'Azure Event Hubs Data Sender'role on the 'Hub' scope to the Managed Identity
+
 # Run
 
 ```
